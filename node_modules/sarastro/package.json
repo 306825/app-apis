@@ -1,0 +1,27 @@
+{
+  "name": "sarastro"
+, "author": "Brian Mavity <brian@brianmavity.com> (http://www.brianmavity.com)"
+, "repository": {
+    "type": "git",
+    "url": "git://github.com/bmavity/sarastro.git"
+  }
+, "bugs": {
+    "url": "https://github.com/bmavity/sarastro/issues"
+  }
+, "contributors": [
+    "Brian Mavity <brian@brianmavity.com> (http://www.brianmavity.com)"
+  ]
+, "description": "Function parameter parsing"
+, "dependencies": {
+  }
+, "devDependencies": {
+  }
+, "engines": {
+    "node": "0.8.x, 0.10.x"
+  }
+, "keywords": [
+  ]
+, "license": "Modified MIT"
+, "main": "./sarastro.js"
+, "version": "0.0.1"
+}

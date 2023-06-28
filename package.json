@@ -1,0 +1,23 @@
+{
+  "name": "smd-app-apis",
+  "version": "1.0.0",
+  "description": "\"APIs for the smd App\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "mbongeni",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "express-session": "^1.17.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
+    "wagner": "^0.6.4",
+    "wagner-core": "^0.2.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "connect-redis": "^6.1.3"
+  }
+}
