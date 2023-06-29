@@ -17,7 +17,7 @@ app.use(session({
     secret: 'secrete',
     store: MongoStore.create({
         //mongoUrl: 'mongodb://localhost/test',
-        mongoUrl: process.env.MONGODB_CONNECION,
+        mongoUrl: process.env.MONGODB_CONNECTION,
         collectionName: 'sessions'
     }),
     resave: false,
@@ -49,7 +49,7 @@ async function main() {
         console.log(process.env.SERVER_ENV);
         PORT = 7000;
     }
-    await mongoose.connect(process.env.MONGODB_CONNECION);
+    await mongoose.connect(process.env.MONGODB_CONNECTION);
 }
 
 
