@@ -11,7 +11,7 @@ jobs:
     - name: zip files for uploading
       run: |
         mkdir code
-        cp api ./code/
+        cp api.js ./code/
         cp index.js ./code/
         cp -r usecases/ ./code/
         cp package.json ./code/
