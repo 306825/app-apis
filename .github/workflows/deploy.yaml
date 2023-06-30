@@ -7,6 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+
+    - name: zip files for uploading
+      run: |
+        mkdir code
+        cp api ./code/
+        cp index.js ./code/
+        cp -r usecases/ ./code/
+        cp package.json ./code/
+        cp package-lock.json ./code/
+        cp -r entities/ ./code/
+        cp models.js ./code/
+        cp -r schema/ ./code/
+        tar -zcvf code.tar.gz code/
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.4
       with:
@@ -14,5 +27,5 @@ jobs:
         username: ${{ secrets.AZURE_USERNAME }}
         password: ${{ secrets.AZURE_USER_PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "tests/a.txt,tests/b.txt"
-        target: your_server_target_folder_path
+        source: "code.tar.gz"
+        target: "./"
